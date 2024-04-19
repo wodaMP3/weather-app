@@ -1,16 +1,18 @@
 import './List.css';
+import { Card } from 'semantic-ui-react';
 
 const List = ({ weatherData }) => {
     return (
-        <div className='list'>
+        <Card className='list'>
             {weatherData && (
-                <div>
-                    <h2 className='headerList'>{weatherData.name}</h2>
-                    <p className='temp'>Temperature: {weatherData.main.temp}</p>
-                    <p className='desc'>Weather: {weatherData.weather[0].description}</p>
-                </div>
+                <Card.Content>
+                    <Card.Header className='header'>{weatherData.name}</Card.Header>
+                    <p className='temp'>Temperature: {weatherData.main.temp}&deg;C</p>
+                    <p className='desc'>Weather: {weatherData.weather[0].main}</p>
+                    <p>Humidity: {weatherData.main.humidity} %</p>
+                </Card.Content>
             )}
-        </div>
+        </Card>
     );
 }
 
