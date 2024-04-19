@@ -10,6 +10,7 @@ const Form = () => {
                     value={city}
                     onChange={(e) => setCity(e.target.value)}/>
             </label>
+            <button className="button">sellect</button>
         </form>
     );
 }
