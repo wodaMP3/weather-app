@@ -1,5 +1,7 @@
 import Header from "./components/Header/Header";
 import WeatherApp from "../WeatherApp/WeatherApp";
+import './styles/globals.css'
+import 'semantic-ui-css/semantic.min.css'
 
 const App = () => {
     return (

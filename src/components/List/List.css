@@ -1,0 +1,20 @@
+.list {
+    display: flex;
+    justify-content: center;
+}
+.headerList {
+    font-family: var(--font-family);
+    font-size: 48px;
+}
+
+.temp {
+    font-size: 20px;
+    line-height: 16px;
+    color: var(--black);
+}
+
+.desc {
+    font-size: 16px;
+    line-height: 16px;
+    color: var(--black);
+}

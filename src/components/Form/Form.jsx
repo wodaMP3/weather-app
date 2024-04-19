@@ -13,14 +13,15 @@ const Form = ({ onSubmit }) => {
     };
 
     return (
-        <form onSubmit={handleSubmit}>
-            <input 
+        <form className="form"
+            onSubmit={handleSubmit}>
+            <input className="input"
                 type="text" 
                 placeholder="Enter the city name"
                 value={city}    
                 onChange={handleCityChange}
             />
-            <button className="button">get weather</button>
+            <button className="buttonSearch">get weather</button>
         </form>
     );
 };
