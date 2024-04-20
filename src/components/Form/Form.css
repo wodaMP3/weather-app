@@ -1,13 +1,32 @@
-.input {
+.form {
     display: flex;
-    justify-content: center;
 }
 
 .input {
+    position: relative;
     display: flex;
-    justify-content: center;
+    justify-content: center;    
+    border-radius: 5px;
+    font-size: 25px;
+    left: 390px;
 }
+
 
 .buttonSearch {
-    color: blue;
+    display: list-item;
+    position: relative;
+    
+    font-family: var(--font-family);
+    background-color: #95BFFF;
+    
+    border: none;
+    border-radius: 5px;
+
+    left: 400px;
+
+    transition: .5s;
+}
+
+.buttonSearch:hover {
+    background-color: #559AFF;
 }

@@ -3,6 +3,7 @@ body {
 }
 
 :root {
-  --font-family: 'Noto Sans' sans-serif;
-  --black: #332E2E
+  --font-family: 'Recursive', sans-serif;
+  --black: #332E2E;
+  --blue: #95BFFF;
 }

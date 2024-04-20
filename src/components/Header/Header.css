@@ -1,5 +1,7 @@
-.header {
+.headerApp {
     display: flex;
+    background-color: var(--blue);
+    border: solid var(--blue);
     font-family: var(--font-family);
     font-size: 20px;
     margin-bottom: 20px;

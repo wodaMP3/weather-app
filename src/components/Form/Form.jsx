@@ -1,4 +1,5 @@
 import { useState } from "react";
+import './Form.css';
 
 const Form = ({ onSubmit }) => {
     const [city, setCity] = useState('');
