@@ -24,6 +24,7 @@
 }
 
 .ui.card.list {
+    background-color: #C8DDFC;
     left: 50%;
     transform: translateX(-50%);
 }
