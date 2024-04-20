@@ -6,6 +6,12 @@
     background-color: var(--blue);
 }
 
+.wi {
+    position: relative;
+    left: 87px;
+    font-size: 30px;
+}
+
 .list {
     display: flex;
     align-items: center;

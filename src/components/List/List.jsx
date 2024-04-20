@@ -1,6 +1,10 @@
+/* eslint-disable react/prop-types */
+import 'weather-icons/css/weather-icons.min.css';
+
 import './List.css';
 import { Card } from 'semantic-ui-react';
 import moment from 'moment';
+import WeatherIcon from '../WeatherIcons/WeatherIcons';
 
 const List = ({ weatherData }) => {
     
@@ -31,6 +35,7 @@ const List = ({ weatherData }) => {
                     <p className='humidity'>Humidity: {weatherData.main.humidity} %</p>
                     <div className='flex'><p>Day: {moment().format('dddd')}</p></div>
                     <p className='date'>Date: {moment().format('LL')}</p>
+                    <WeatherIcon weatherCode={weatherData.weather[0].id} />
                 </Card.Content>
             )}
         </Card>
