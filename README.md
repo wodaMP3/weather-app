@@ -1,5 +1,5 @@
 # Weather App
-  buitl with https://openweathermap.org/api
+  built with https://openweathermap.org/api
  
  React + Vite
 
