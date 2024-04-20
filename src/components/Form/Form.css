@@ -1,20 +1,20 @@
 .form {
     display: flex;
+    justify-content: center;
 }
 
 .input {
+    left: 38px;
     position: relative;
-    display: flex;
-    justify-content: center;    
     border-radius: 5px;
     font-size: 25px;
-    left: 390px;
 }
 
 
 .buttonSearch {
     display: list-item;
     position: relative;
+    left: 40px;
     
     font-family: var(--font-family);
     background-color: #95BFFF;
@@ -22,9 +22,7 @@
     border: none;
     border-radius: 5px;
 
-    left: 400px;
-
-    transition: .5s;
+    color: var(--black);
 }
 
 .buttonSearch:hover {

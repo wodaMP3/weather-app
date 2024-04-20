@@ -17,16 +17,20 @@
 }
 
 .ui.card.list {
-    left: 400px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .header{
     background-color: var(--blue);
+
+    border-radius: 15px;
     border: solid var(--blue);
+
     color: white;
     padding: 10px;
+
     font-size: 28px;
-    border-radius: 15px;
     font-family: 'Recursive', sans-serif;
 }
 
