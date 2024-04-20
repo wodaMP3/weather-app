@@ -29,7 +29,9 @@ const List = ({ weatherData }) => {
         <Card className='list'>
             {weatherData && (
                 <Card.Content>
-                    <Card.Header>{weatherData.name}</Card.Header>
+                    <Card.Header>
+                        <h1 className='h1'>{weatherData.name}</h1>
+                    </Card.Header>
                     <p className='temp' style={{ color: textColor(weatherData.main.temp)}}>Temperature: {weatherData.main.temp}&deg;C</p>
                     <p className='desc'>Weather: {weatherData.weather[0].main}</p>
                     <p className='humidity'>Humidity: {weatherData.main.humidity} %</p>

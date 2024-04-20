@@ -19,6 +19,8 @@ const WeatherIcon = ({ weatherCode }) => {
       case 503:
       case 504:
         return 'wi-rain'; // Дождь
+        case 741:
+            return 'wi-fog'; // Туман
       default:
         return 'wi-day-sunny';
     }
