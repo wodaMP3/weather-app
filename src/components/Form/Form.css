@@ -14,9 +14,12 @@
 .buttonSearch {
     display: flex;
     position: relative;
+    align-items: center;
     left: 40px;
+    
     text-transform: none;
     text-decoration: none;
+    
     font-size: 19px;
     
     font-family: var(--font-family);
