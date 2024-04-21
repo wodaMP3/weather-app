@@ -1,7 +1,7 @@
 import { useState } from "react";
 import './Form.css';
 
-const Form = ({ onSubmit }) => {
+const Form = ({ onSubmit, ...props }) => {
     const [city, setCity] = useState('');
 
     const handleCityChange = (e) => {
@@ -12,6 +12,7 @@ const Form = ({ onSubmit }) => {
         e.preventDefault();
         onSubmit(city);
     };
+    {props}
 
     return (
         <form className="form"

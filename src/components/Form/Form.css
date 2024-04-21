@@ -7,14 +7,17 @@
     left: 38px;
     position: relative;
     border-radius: 5px;
-    font-size: 25px;
+    font-size: 28px;
 }
 
 
 .buttonSearch {
-    display: list-item;
+    display: flex;
     position: relative;
     left: 40px;
+    text-transform: none;
+    text-decoration: none;
+    font-size: 19px;
     
     font-family: var(--font-family);
     background-color: #95BFFF;
@@ -24,6 +27,8 @@
 
     color: var(--black);
 }
+
+
 
 .buttonSearch:hover {
     background-color: #559AFF;
