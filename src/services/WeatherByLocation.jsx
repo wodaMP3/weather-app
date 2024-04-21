@@ -10,23 +10,6 @@ const WeatherByLocation = () => {
     const [weather, setWeather] = useState(null);
 
     useEffect(() => {
-
-        if (navigator.geolocation) {
-            navigator.geolocation.getCurrentPosition(
-                (position) => {
-                    setLocation({
-                        latitude: position.coords.latitude,
-                        longitude: position.coords.longitude
-                    });
-                }
-            ), 
-            (error) => {
-                console.error('Failed to get geolocation', error)
-            }
-        }
-    }, [])
-
-    useEffect(() => {
         if (location) {
             axios.get(API_BASE_URL, {
                 params: {
@@ -45,18 +28,6 @@ const WeatherByLocation = () => {
         }
     }, [location]);
 
-    console.log('loc', location)
-
-    return (
-        <div>
-            {weather && (
-                <div>
-                    <p>Температура: {weather.main.temp}&deg;C</p>
-                    <p>Погода: {weather.weather[0].description}</p>
-                </div>
-            )}
-        </div>
-    );
     
 }
 
