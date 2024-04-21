@@ -2,8 +2,10 @@ import './Header.css';
 
 const Header = () => {
     return (
-        <header className="headerApp">
+        <header className="wrapper">
+            <h1 className='headerApp'>
             WeatherApp!
+            </h1>
         </header>
     );
 };

@@ -24,17 +24,18 @@
 }
 
 .ui.card.list {
+    display: flex;
+    position: left;
     background-color: #C8DDFC;
-    left: 50%;
-    transform: translateX(-50%);
 }
 
 .header{
     background-color: var(--blue);
 
+    display: flex;
+
     border-radius: 15px;
     border: solid var(--blue);
-
     color: white;
     padding: 10px;
 
@@ -42,9 +43,8 @@
     font-family: 'Recursive', sans-serif;
 }
 
-.h1 {
+.list-header {
     display: flex;
-    position: relative;
 
     justify-content: center;
 

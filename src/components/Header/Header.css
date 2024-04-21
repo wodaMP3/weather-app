@@ -1,9 +1,18 @@
+.wrapper {
+    position: relative;
+    background-color: var(--black);
+    height: 100px;
+    width: auto;
+}
+
 .headerApp {
     display: flex;
-    background-color: var(--blue);
-    border: solid var(--blue);
-    font-family: var(--font-family);
-    font-size: 20px;
-    margin-bottom: 20px;
-    justify-content: center;
+    flex-wrap: nowrap;
+
+    width: 100px;
+    margin: 10px;
+    
+    position: relative;
+    color: aliceblue;
+    font-size: 25px;
 }
