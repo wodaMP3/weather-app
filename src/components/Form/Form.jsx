@@ -27,8 +27,8 @@ const Form = ({ onSubmit }) => {
                 headers: {'X-Api-Key': cityApiKey}
             });
             console.log(response);
-            const cityName = response.data.map(city => city.name);
-            setSuggestions(cityName);
+            const cities = response.data.map(city => city.name);
+            setSuggestions(cities);
         } catch (error) {
             console.error('Failed to fetch city data:', error);
             setSuggestions([]);
@@ -40,6 +40,18 @@ const Form = ({ onSubmit }) => {
         onSubmit(city);
     };
 
+    const [value, setValue] = useState('');
+
+    const filteredCities = value ? suggestions.filter(city => {
+        return city.toLowerCase().includes(value.toLowerCase());
+    }) : suggestions;
+
+    console.log(filteredCities)
+
+    const itemClickHandler = (cityName) => {
+        setValue(cityName)
+    }
+
     return (
         <form className="form" onSubmit={handleSubmit}>    
             <input
@@ -50,8 +62,14 @@ const Form = ({ onSubmit }) => {
                 onChange={handleCityChange}
             />
             <ul className="autocomplete">
-                {suggestions.map((city, index) => (
-                    <li className='autocomplete__item' key={index}>{city}</li>
+                {filteredCities.map((cityName, index) => (
+                    <li 
+                        className="autocomplete__item"
+                        key={index}
+                        onClick={() => itemClickHandler(city)}
+                    >
+                        {cityName}
+                    </li>
                 ))}
             </ul>
             <button className="buttonSearch">Get weather</button>

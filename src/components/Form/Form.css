@@ -40,6 +40,7 @@
     width: 100%; /* Ширина списка равна ширине родительского элемента */
     background-color: white;
     border-radius: 5px;
+    list-style: none;
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.15);
     overflow-y: auto; /* Добавлено свойство overflow-y для возможности прокрутки, если элементов слишком много */
     max-height: 240px;
@@ -47,6 +48,7 @@
 
 .autocomplete__item {
     padding: 10px;
+    width: 100%;
     cursor: pointer;
 }
 
