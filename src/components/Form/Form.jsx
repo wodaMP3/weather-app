@@ -5,6 +5,9 @@ import './Form.css';
 const apiKey = import.meta.env.VITE_API_KEY;
 const API_BASE_URL = 'https://api.openweathermap.org/data/2.5/weather';
 
+const cityApiKey = import.meta.env.VITE_CITY_API_KEY;
+const CITY_BASE_URL = 'https://api.api-ninjas.com/v1/city?name=';
+
 const Form = ({ onSubmit }) => {
     const [city, setCity] = useState('');
     const [suggestions, setSuggestions] = useState([]);
@@ -19,7 +22,8 @@ const Form = ({ onSubmit }) => {
         }
 
         try {
-            const response = await axios.get(`${API_BASE_URL}?q=${value}&appid=${apiKey}`);
+            const response = await axios.get(`${CITY_BASE_URL}?q=${value}&appid=${cityApiKey}`);
+            console.log(response.data)
             const cityName = response.data.name;
             setSuggestions([cityName]);
         } catch (error) {
