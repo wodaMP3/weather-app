@@ -1,14 +1,12 @@
 import axios from "axios";
 const cityApiKey = import.meta.env.VITE_CITY_API_KEY;
-const CITY_BASE_URL = 'https://api.api-ninjas.com/v1/city?name=';
+const VITE_CITY_BASE_URL = 'https://api.api-ninjas.com/v1/city?name=';
 
 const fetchCityData = async (city) => {
     try {
-        const response = await axios.get(`https://api.ninjas.city/search?q=${city}`, {
+        const response = await axios.get(VITE_CITY_BASE_URL, {
             params: {
-                q: city,
-                appid: cityApiKey,
-                units: 'metric'
+                query: city,
             },
             headers: {'X-Api-Key': cityApiKey}
         });
@@ -17,6 +15,7 @@ const fetchCityData = async (city) => {
         console.log('failed to fetch cities data:', error)
         return null;
     }
+    
 }
 
 export default fetchCityData;

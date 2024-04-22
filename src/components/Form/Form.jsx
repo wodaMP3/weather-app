@@ -2,11 +2,9 @@ import { useState } from "react";
 import axios from "axios";
 import './Form.css';
 
-const apiKey = import.meta.env.VITE_API_KEY;
-const API_BASE_URL = 'https://api.openweathermap.org/data/2.5/weather';
 
 const cityApiKey = import.meta.env.VITE_CITY_API_KEY;
-const CITY_BASE_URL = 'https://api.api-ninjas.com/v1/city?name=';
+const API_BASE_CITY_URL = 'https://api.api-ninjas.com/v1/city?name=';
 
 const Form = ({ onSubmit }) => {
     const [city, setCity] = useState('');
@@ -22,8 +20,13 @@ const Form = ({ onSubmit }) => {
         }
 
         try {
-            const response = await axios.get('https://api.api-ninjas.com/v1/geocoding?city=' + city);
-            console.log(response.data)
+            const response = await axios.get(`${API_BASE_CITY_URL}${cityApiKey}`, {
+                params: {
+                    name: value,
+                },
+                headers: {'X-Api-Key': cityApiKey}
+            });
+            console.log(response);
             const cityName = response.data.name;
             setSuggestions([cityName]);
         } catch (error) {
