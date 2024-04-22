@@ -28,7 +28,7 @@ const Form = ({ onSubmit }) => {
             });
             console.log(response);
             const cityName = response.data.map(city => city.name);
-            setSuggestions([cityName]);
+            setSuggestions(cityName);
         } catch (error) {
             console.error('Failed to fetch city data:', error);
             setSuggestions([]);
