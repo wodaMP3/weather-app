@@ -22,7 +22,7 @@ const Form = ({ onSubmit }) => {
         }
 
         try {
-            const response = await axios.get(`${CITY_BASE_URL}?q=${value}&appid=${cityApiKey}`);
+            const response = await axios.get('https://api.api-ninjas.com/v1/geocoding?city=' + city);
             console.log(response.data)
             const cityName = response.data.name;
             setSuggestions([cityName]);

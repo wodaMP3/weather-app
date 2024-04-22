@@ -44,8 +44,8 @@
 .autocomplete {
     display: inline;
     position: absolute;
-    top: 50px;
-    width: 480px;
+    top: 100px;
+    width: 355px;
     background-color: white;
     list-style: none;
     margin: 0;

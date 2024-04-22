@@ -4,9 +4,11 @@ const CITY_BASE_URL = 'https://api.api-ninjas.com/v1/city?name=';
 
 const fetchCityData = async (city) => {
     try {
-        const response = await axios.get(CITY_BASE_URL, {
+        const response = await axios.get(`https://api.ninjas.city/search?q=${city}`, {
             params: {
-                name: city,
+                q: city,
+                appid: cityApiKey,
+                units: 'metric'
             },
             headers: {'X-Api-Key': cityApiKey}
         });
