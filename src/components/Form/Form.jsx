@@ -27,7 +27,7 @@ const Form = ({ onSubmit }) => {
                 headers: {'X-Api-Key': cityApiKey}
             });
             console.log(response);
-            const cityName = response.data.name;
+            const cityName = response.data.map(city => city.name);
             setSuggestions([cityName]);
         } catch (error) {
             console.error('Failed to fetch city data:', error);
