@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Recursive&display=swap');
 
 .main{
     width: 700px;
@@ -23,12 +22,6 @@
     justify-content: center;
 }
 
-.ui.card.list {
-    display: flex;
-    position: left;
-    top: 100px;
-    background-color: #C8DDFC;
-}
 
 .header{
     background-color: var(--blue);
@@ -41,15 +34,12 @@
     padding: 10px;
 
     font-size: 28px;
-    font-family: 'Recursive', sans-serif;
+    font-family: 'Noto Sans', sans-serif;
 }
 
 .list-header {
     display: flex;
-
-    justify-content: center;
-
-    font-family: 'Recursive', sans-serif;
+    margin-left: 50px;
 }
 
 .day{
