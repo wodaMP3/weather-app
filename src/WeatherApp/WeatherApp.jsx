@@ -1,7 +1,7 @@
 import { useState } from "react";
-import Form from "../src/components/Form/Form";
-import fetchWeatherData from "../src/services/WeatherService";
-import List from "../src/components/List/List";
+import Form from "../components/Form/Form";
+import fetchWeatherData from "../services/WeatherService";
+import List from "../components/List/List";
 
 const WeatherApp = () => {
     const [weatherData, setWeatherData] = useState(null);
@@ -20,7 +20,7 @@ const WeatherApp = () => {
     return (
         <div>
             <Form onSubmit={handleFormSumbit}/>
-            <List weatherData={weatherData} />
+            <List weatherData={weatherData} />    
         </div>
     )
 }
