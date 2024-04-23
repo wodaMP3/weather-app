@@ -1,9 +1,9 @@
 .form {
     display: flex;
     width: 355px;
-    position: absolute; /* Изменено на абсолютное позиционирование */
-    left: 50%; /* Перемещаем влево на половину ширины */
-    transform: translateX(-50%); /* Центрируем по горизонтали */
+    position: absolute; 
+    left: 50%; 
+    transform: translateX(-50%); 
     top: 0;
 }
 
@@ -16,7 +16,6 @@
 }
 
 .buttonSearch {
-    /* position: relative; -- Убрано */
     align-items: center; 
     text-transform: none;
     text-decoration: none;
@@ -33,16 +32,16 @@
     background-color: #559AFF;
 }
 .autocomplete {
-    display: block; /* Изменено на block, чтобы список был видимым */
+    display: block; 
     position: absolute;
-    top: calc(100% + 10px); /* Изменено на использование calc для установки расстояния от верхней границы родительского элемента */
+    top: calc(100% + 10px); 
     left: 0;
-    width: 100%; /* Ширина списка равна ширине родительского элемента */
+    width: 100%; 
     background-color: white;
     border-radius: 5px;
     list-style: none;
     box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.15);
-    overflow-y: auto; /* Добавлено свойство overflow-y для возможности прокрутки, если элементов слишком много */
+    overflow-y: auto; 
     max-height: 240px;
 }
 
