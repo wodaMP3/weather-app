@@ -49,7 +49,8 @@ const Form = ({ onSubmit }) => {
     console.log(filteredCities)
 
     const itemClickHandler = (cityName) => {
-        setValue(cityName)
+        setCity(cityName);
+        setSuggestions([]);
     }
 
     return (
@@ -66,7 +67,7 @@ const Form = ({ onSubmit }) => {
                     <li 
                         className="autocomplete__item"
                         key={index}
-                        onClick={() => itemClickHandler(city)}
+                        onClick={() => itemClickHandler(cityName)}
                     >
                         {cityName}
                     </li>
